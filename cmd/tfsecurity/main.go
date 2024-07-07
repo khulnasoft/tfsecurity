@@ -22,7 +22,7 @@ https://github.com/khulnasoft-lab/tfsecurity/discussions/56
 `
 
 func main() {
-	fmt.Print(transitionMsg)
+	fmt.Fprint(os.Stderr, transitionMsg)
 	if err := cmd.Root().Execute(); err != nil {
 		if err.Error() != "" {
 			fmt.Printf("Error: %s\n", err)
