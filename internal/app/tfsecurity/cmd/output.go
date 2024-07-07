@@ -54,7 +54,7 @@ func gatherLinks(result scan.Result) []string {
 	} else {
 		docsLink = []string{
 			fmt.Sprintf(
-				"https://khulnasoft-lab.github.io/tfsecurity/%s/checks/%s/%s/%s/",
+				"https://khulnasoft.github.io/tfsecurity/%s/checks/%s/%s/%s/",
 				v,
 				result.Rule().Provider,
 				strings.ToLower(result.Rule().Service),

@@ -10,7 +10,7 @@ Please review the following resources:
 
 - [ARCHITECTURE.md](ARCHITECTURE.md): A very high level document that gives an overview of the code and aims to answer the question *Where is the code that does X?*
 - [#tfsecurity on KhulnaSoft Slack](https://slack.khulnasoft.com): Come and talk over any questions/suggestions you have with us on Slack!
-- [tfsecurity documentation](https://khulnasoft-lab.github.io/tfsecurity/latest/): General usage documentation and rule information.
+- [tfsecurity documentation](https://khulnasoft.github.io/tfsecurity/latest/): General usage documentation and rule information.
 
 ## :ballot_box_with_check: PR Checklist
 

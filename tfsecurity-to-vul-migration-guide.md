@@ -3,7 +3,7 @@ Overtime we've taken [Tunnel][tunnel] to be the go-to scanning tool for a vareit
 
 ### Main differences between Tunnel and tfsecurity
 
-Tunnel's design keeps misconfiguration up to date automatically. New misconfiguration are updated in Tunnel by pulling from the Container Registry. The embedded misconfiguration in Tunnel are only used if Tunnel cannot pull from the remote registry. See the [following documentation](https://khulnasoft-lab.github.io/vul/v0.41/docs/scanner/misconfiguration/policy/builtin/#policy-distribution) for further details.
+Tunnel's design keeps misconfiguration up to date automatically. New misconfiguration are updated in Tunnel by pulling from the Container Registry. The embedded misconfiguration in Tunnel are only used if Tunnel cannot pull from the remote registry. See the [following documentation](https://khulnasoft.github.io/vul/v0.41/docs/scanner/misconfiguration/policy/builtin/#policy-distribution) for further details.
 
 ## Comparison with examples
 ### Simple scan
@@ -16,7 +16,7 @@ $ vul config <dir>
 $ tfsecurity <dir>
 ```
 
-The documentation can be found in Tunnel under the [following link.](https://khulnasoft-lab.github.io/vul/latest/docs/scanner/misconfiguration/)
+The documentation can be found in Tunnel under the [following link.](https://khulnasoft.github.io/vul/latest/docs/scanner/misconfiguration/)
 
 ### Passing tfvars
 #### With Tunnel
@@ -28,7 +28,7 @@ $ vul --tf-vars <vars.tf> <dir>
 $ tfsecurity <dir> --tf-vars-file <vars.tf>
 ```
 
-The documentation can be found in Tunnel under the [following link.](https://khulnasoft-lab.github.io/vul/v0.41/docs/scanner/misconfiguration/#terraform-value-overrides)
+The documentation can be found in Tunnel under the [following link.](https://khulnasoft.github.io/vul/v0.41/docs/scanner/misconfiguration/#terraform-value-overrides)
 
 ### Report formats
 #### With Tunnel
@@ -41,7 +41,7 @@ $ vul config --format <format-type> <dir>
 $ tfsecurity <dir> --format <format-type>
 ```
 
-The documentation can be found in Tunnel under the [following link.](https://khulnasoft-lab.github.io/vul/v0.41/docs/configuration/reporting/)
+The documentation can be found in Tunnel under the [following link.](https://khulnasoft.github.io/vul/v0.41/docs/configuration/reporting/)
 
 ## FAQs
 
@@ -49,7 +49,7 @@ The documentation can be found in Tunnel under the [following link.](https://khu
 
 Yes, Tunnel supports different report templates. These can either be set, loaded through a file or by providing a default template such as for JUnit. 
 
-For more information, please [the documentation.](https://khulnasoft-lab.github.io/vul/v0.41/docs/configuration/reporting/#junit)
+For more information, please [the documentation.](https://khulnasoft.github.io/vul/v0.41/docs/configuration/reporting/#junit)
 
 **Does Tunnel support multiple outputs?**
 
@@ -67,7 +67,7 @@ vul config --output report.json --format json ./bad_iac/docker
 ```
 This will saver the json report into a `report.json` file.
 
-[Documentation](https://khulnasoft-lab.github.io/vul/v0.41/docs/configuration/reporting/)
+[Documentation](https://khulnasoft.github.io/vul/v0.41/docs/configuration/reporting/)
 
 Note that one report can be generated per scan. However, if you require multiple different reports, the same scan would pull the information from the cache to generate a new report format.
 
@@ -75,16 +75,16 @@ Note that one report can be generated per scan. However, if you require multiple
 
 Yes, you can specify that Tunnel should skip a directory, using the following flag `--skip-dirs`.
 
-[Documentation](https://khulnasoft-lab.github.io/vul/v0.41/docs/configuration/others/)
+[Documentation](https://khulnasoft.github.io/vul/v0.41/docs/configuration/others/)
 
 Alternatively, it is possible to skip files, using this flag `--skip-files`.
 
-[Documentation](https://khulnasoft-lab.github.io/vul/v0.41/docs/configuration/others/#skip-files)
+[Documentation](https://khulnasoft.github.io/vul/v0.41/docs/configuration/others/#skip-files)
 
 ## Feedback
 
 We welcome any feedback if you find features that today are not available with Tunnel misconfigration scanning that are available in tfsecurity. 
 
-For further information on scanning terraform with Tunnel, do have a look at the [Tunnel Terraform Guide](https://khulnasoft-lab.github.io/vul/latest/tutorials/terraform/scannig/).
+For further information on scanning terraform with Tunnel, do have a look at the [Tunnel Terraform Guide](https://khulnasoft.github.io/vul/latest/tutorials/terraform/scannig/).
 
 [tunnel]: https://github.com/khulnasoft/tunnel

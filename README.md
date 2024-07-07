@@ -159,15 +159,15 @@ tfsecurity supports many popular cloud and platform providers
 
 | Checks                                                                                  |
 |:----------------------------------------------------------------------------------------|
-| [AWS Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/aws/)                   |
-| [Azure Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/azure/)               |
-| [GCP Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/google/)                |
-| [CloudStack Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/cloudstack/)     |
-| [DigitalOcean Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/digitalocean/) |
-| [GitHub Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/github/)             |
-| [Kubernetes Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/kubernetes/)     |
-| [OpenStack Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/openstack/)       |
-| [Oracle Checks](https://khulnasoft-lab.github.io/tfsecurity/latest/checks/oracle/)             |
+| [AWS Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/aws/)                   |
+| [Azure Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/azure/)               |
+| [GCP Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/google/)                |
+| [CloudStack Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/cloudstack/)     |
+| [DigitalOcean Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/digitalocean/) |
+| [GitHub Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/github/)             |
+| [Kubernetes Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/kubernetes/)     |
+| [OpenStack Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/openstack/)       |
+| [Oracle Checks](https://khulnasoft.github.io/tfsecurity/latest/checks/oracle/)             |
 
 ## Running in CI
 
