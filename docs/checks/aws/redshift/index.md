@@ -12,4 +12,3 @@ title: redshift
 - [use-vpc](use-vpc) Redshift cluster should be deployed into a specific VPC
 
 
-
