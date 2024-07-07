@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/khulnasoft-lab/defsec/pkg/scanners/options"
 	"github.com/google/uuid"
+	"github.com/khulnasoft-lab/defsec/pkg/scanners/options"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
 
 	"github.com/khulnasoft-lab/defsec/pkg/scan"
