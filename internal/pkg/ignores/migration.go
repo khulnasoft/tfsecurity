@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/khulnasoft-lab/tfsecurity/internal/pkg/legacy"
+	"github.com/khulnasoft/tfsecurity/internal/pkg/legacy"
 )
 
 type migrationStatistic struct {

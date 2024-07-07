@@ -1,5 +1,5 @@
 # Migrating from tfsecurity to Tunnel
-Overtime we've taken [Tunnel][tunnel] to be the go-to scanning tool for a vareity of things. This also includes terraform scanning. For further information, have a look at the announcement ["tfsecurity is joining the Tunnel family".](https://github.com/khulnasoft-lab/tfsecurity/discussions/56)
+Overtime we've taken [Tunnel][tunnel] to be the go-to scanning tool for a vareity of things. This also includes terraform scanning. For further information, have a look at the announcement ["tfsecurity is joining the Tunnel family".](https://github.com/khulnasoft/tfsecurity/discussions/56)
 
 ### Main differences between Tunnel and tfsecurity
 

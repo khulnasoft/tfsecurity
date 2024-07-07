@@ -14,7 +14,7 @@ function deploy {
 	echo "deploying changes"
 	pushd _site
 	git config --global user.name "GitHub Actions Build"
-	git config --global user.email github-actions@tfsecurity.dev
+	git config --global user.email github-actions@khulnasoft.com
 	git add -A
 	git remote set-url origin "${DEPLOY_REPO}"
 	git commit -m "GitHub Actions Build: ${GITHUB_RUN_ID}. ${MESSAGE}" || true

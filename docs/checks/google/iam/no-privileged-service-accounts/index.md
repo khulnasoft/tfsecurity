@@ -25,7 +25,7 @@ The following example will fail the google-iam-no-privileged-service-accounts ch
  resource "google_service_account" "test" {
    account_id   = "account123"
    display_name = "account123"
-   email        = "jim@tfsecurity.dev"
+   email        = "jim@khulnasoft.com"
  }
  
  resource "google_project_iam_member" "project" {
@@ -46,7 +46,7 @@ The following example will pass the google-iam-no-privileged-service-accounts ch
  resource "google_service_account" "test" {
  	account_id   = "account123"
  	display_name = "account123"
-    email        = "jim@tfsecurity.dev"
+    email        = "jim@khulnasoft.com"
  }
  
  resource "google_project_iam_member" "project" {

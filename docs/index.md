@@ -24,7 +24,7 @@ tfsecurity will continue to remain available for the time being, although our en
 
 ## tfsecurity to Tunnel migration guide
 
-For further information on how Tunnel compares to tfsecurity and moving from tfsecurity to Tunnel, do have a look at the [migration guide.](https://github.com/khulnasoft-lab/tfsecurity/blob/master/tfsecurity-to-vul-migration-guide.md)
+For further information on how Tunnel compares to tfsecurity and moving from tfsecurity to Tunnel, do have a look at the [migration guide.](https://github.com/khulnasoft/tfsecurity/blob/master/tfsecurity-to-vul-migration-guide.md)
 
 ## tfsecurity
 
@@ -50,4 +50,4 @@ Contact us about any matter by opening a GitHub Discussion [here][discussions]
 
 [khulnasoft]: https://khulnasoft.com
 [oss]: https://www.khulnasoft.com/products/open-source-projects/
-[discussions]: https://github.com/khulnasoft-lab/tfsecurity/discussions
+[discussions]: https://github.com/khulnasoft/tfsecurity/discussions

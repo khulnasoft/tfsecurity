@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/khulnasoft-lab/tfsecurity/internal/app/tfsecurity/cmd"
+	"github.com/khulnasoft/tfsecurity/internal/app/tfsecurity/cmd"
 )
 
 const transitionMsg = `
@@ -17,7 +17,7 @@ for the time being, although our engineering
 attention will be directed at Tunnel going forward.
 
 You can read more here: 
-https://github.com/khulnasoft-lab/tfsecurity/discussions/56
+https://github.com/khulnasoft/tfsecurity/discussions/56
 ======================================================
 `
 

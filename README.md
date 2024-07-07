@@ -1,4 +1,4 @@
-[![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft-lab/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft-lab/tfsecurity)
+[![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft/tfsecurity)
 [![Docker Build](https://img.shields.io/docker/v/khulnasoft/tfsecurity?label=docker)](https://hub.docker.com/r/khulnasoft/tfsecurity)
 [![Chocolatey](https://img.shields.io/chocolatey/v/tfsecurity)](https://chocolatey.org/packages/tfsecurity)
 
@@ -47,22 +47,22 @@ scoop install tfsecurity
 Bash script (Linux):
 
 ```console
-curl -s https://raw.githubusercontent.com/khulnasoft-lab/tfsecurity/master/scripts/install_linux.sh | bash
+curl -s https://raw.githubusercontent.com/khulnasoft/tfsecurity/master/scripts/install_linux.sh | bash
 ```
 
-You can also grab the binary for your system from the [releases page](https://github.com/khulnasoft-lab/tfsecurity/releases).
+You can also grab the binary for your system from the [releases page](https://github.com/khulnasoft/tfsecurity/releases).
 
 Alternatively, install with Go:
 
 ```bash
-go install github.com/khulnasoft-lab/tfsecurity/cmd/tfsecurity@latest
+go install github.com/khulnasoft/tfsecurity/cmd/tfsecurity@latest
 ```
 
 Please note that using `go install` will install directly from the `master` branch and version numbers will not be reported via `tfsecurity --version`.
 
 ### Signing
 
-The binaries on the [releases page](https://github.com/khulnasoft-lab/tfsecurity/releases) are signed with the tfsecurity signing key `D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE`
+The binaries on the [releases page](https://github.com/khulnasoft/tfsecurity/releases) are signed with the tfsecurity signing key `D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE`
 
 Form more information check the [signing page](SIGNING.md) for instructions on verification.
 
@@ -202,12 +202,12 @@ We always welcome contributions; big or small, it can be documentation updates, 
 
 ### Some People who have contributed
 
-<a href = "https://github.com/khulnasoft-lab/tfsecurity/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=khulnasoft-lab/tfsecurity"/>
+<a href = "https://github.com/khulnasoft/tfsecurity/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=khulnasoft/tfsecurity"/>
 </a>
 
 Made with [contributors-img](https://contrib.rocks).
 
 `tfsecurity` is an [KhulnaSoft Security](https://khulnasoft.com) open source project.
 Learn about our open source work and portfolio [here](https://www.khulnasoft.com/products/open-source-projects/).
-Join the community, and talk to us about any matter in [GitHub Discussion](https://github.com/khulnasoft-lab/tfsecurity/discussions)
+Join the community, and talk to us about any matter in [GitHub Discussion](https://github.com/khulnasoft/tfsecurity/discussions)

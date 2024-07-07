@@ -1,7 +1,7 @@
-IMAGE := tfsecurity/tfsecurity
+IMAGE := khulnasoft/tfsecurity
 SHELL := /bin/bash
 
-MKDOCS_IMAGE := khulnasoft/mkdocs-material:tracker
+MKDOCS_IMAGE := khulnasoft/mkdocs-material:latest
 MKDOCS_PORT := 8000
 
 .PHONY: image
@@ -44,7 +44,7 @@ typos:
 .PHONY: quality
 quality:
 	which golangci-lint || go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.46.2
-	golangci-lint run --fix 
+	golangci-lint run
 
 .PHONY: fix-typos
 fix-typos:
@@ -53,7 +53,7 @@ fix-typos:
 
 .PHONY: clone-image-github
 clone-image-github:
-	./scripts/clone-images.sh ghcr.io/khulnasoft-lab
+	./scripts/clone-images.sh ghcr.io/khulnasoft
 
 .PHONY: pr-ready
 pr-ready: quality typos
@@ -70,5 +70,5 @@ mkdocs-serve:
 
 .PHONY: update-defsec
 update-defsec:
-	go get github.com/aquasecurity/defsec@latest
+	go get github.com/khulnasoft-lab/defsec@latest
 	go mod tidy

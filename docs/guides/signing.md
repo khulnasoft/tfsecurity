@@ -6,7 +6,7 @@ All tfsecurity binaries are signed with out signing key `D66B222A3EA4C25D5D1A097
 
 #### Public Key
 
-The public key for `signing@tfsecurity.dev` can be downloaded [here](../assets/signing.asc)
+The public key for `signing@khulnasoft.com` can be downloaded [here](../assets/signing.asc)
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -74,12 +74,12 @@ nX5QmAEwF/nBYV3Du7TIvHtz91yL8A==
    ```
 3. Verify that the key has been imported
     ```
-    gpg --list-keys signing@tfsecurity.dev
+    gpg --list-keys signing@khulnasoft.com
     ```
     check the output is
     ```
     pub  rsa4096 2021-05-20 [SC]       D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE
-    uid  [ultimate] Tfsecurity Signing (Code signing for tfsecurity) <signing@tfsecurity.dev>
+    uid  [ultimate] Tfsecurity Signing (Code signing for tfsecurity) <signing@khulnasoft.com>
     sub  rsa4096 2021-05-20 [E]
     ```
 4. Download the required binary and its associated sig file
@@ -92,6 +92,6 @@ nX5QmAEwF/nBYV3Du7TIvHtz91yL8A==
    ```
    gpg: Signature made Fri 09 Jul 2021 11:41:22 BST
    gpg:                using RSA key D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE
-   gpg: Good signature from "Tfsecurity Signing (Code signing for tfsecurity) <signing@tfsecurity.dev>" [ultimate]
+   gpg: Good signature from "Tfsecurity Signing (Code signing for tfsecurity) <signing@khulnasoft.com>" [ultimate]
 
    ```

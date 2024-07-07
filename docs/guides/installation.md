@@ -24,12 +24,12 @@ Install with [Scoop](https://scoop.sh/)
 ```cmd
 scoop install tfsecurity
 ```
-You can also grab the binary for your system from the [releases page](https://github.com/khulnasoft-lab/tfsecurity/releases).
+You can also grab the binary for your system from the [releases page](https://github.com/khulnasoft/tfsecurity/releases).
 
 Alternatively, install with Go:
 
 ```bash
-go install github.com/khulnasoft-lab/tfsecurity/cmd/tfsecurity@latest
+go install github.com/khulnasoft/tfsecurity/cmd/tfsecurity@latest
 ```
 
 
