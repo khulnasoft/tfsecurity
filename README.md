@@ -121,7 +121,7 @@ If you want to run tfsecurity on your repository as a GitHub Action, you can use
 
 ## Use as an Azure DevOps Pipelines Task
 
-You can now install the [official tfsecurity task](https://marketplace.visualstudio.com/items?itemName=KhulnaSoftOfficial.tfsecurity-official). Please raise any issues/feature requests on the [task repository](https://github.com/khulnasoft/tfsecurity-azure-pipelines-task).
+You can now install the [official tfsecurity task](https://marketplace.visualstudio.com/items?itemName=KhulnaSoftOfficial.tfsecurity-official). Please raise any issues/feature requests on the [task repository](https://github.com/khulnasoft-lab/tfsecurity-azure-pipelines-task).
 
 ## Ignoring Warnings
 
