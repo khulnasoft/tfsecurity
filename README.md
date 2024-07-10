@@ -1,6 +1,4 @@
-<p align="center">
-  <img width="354" src=".github/images/tfsecurity_worded.png">
-</p>
+## tfsecurity - scan Terraform code
 
 [![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft/tfsecurity)
 [![Join Our Slack](https://img.shields.io/badge/Slack-Join-green)](https://slack.khulnasoft.com/)
@@ -9,19 +7,6 @@
 [![Chocolatey](https://img.shields.io/chocolatey/v/tfsecurity)](https://chocolatey.org/packages/tfsecurity)
 [![AUR version](https://img.shields.io/aur/version/tfsecurity-bin)](https://aur.archlinux.org/packages/tfsecurity-bin)
 [![VScode Extension](https://img.shields.io/visual-studio-marketplace/v/tfsecurity.tfsecurity?label=vscode)](https://marketplace.visualstudio.com/items?itemName=tfsecurity.tfsecurity)
-
-## 📣 tfsecurity to Trivy Migration
-
-As part of our goal to provide a comprehensive open source security solution for all, we have been consolidating all of our scanning-related efforts in one place, and that is [Trivy](https://github.com/aquasecurity/trivy). 
-
-Over the past year, tfsecurity has laid the foundations to Trivy's IaC & misconfigurations scanning capabilities, including Terraform scanning, which has been natively supported in Trivy for a long time now.
-
-Going forward we want to encourage the tfsecurity community to transition over to Trivy. Moving to Trivy gives you the same excellent Terraform scanning engine, with some extra benefits:
-
-1. Access to more languages and features in the same tool.
-2. Access to more integrations with tools and services through the rich ecosystem around Trivy.
-3. Commercially supported by Khulnasoft as well as by a the passionate Trivy community.
-tfsecurity will continue to remain available for the time being, although our engineering attention will be directed at Trivy going forward.
 
 ## tfsecurity to Trivy migration guide
 
