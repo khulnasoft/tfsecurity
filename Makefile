@@ -1,7 +1,7 @@
-IMAGE := tfsecurity/tfsecurity
+IMAGE := khulnasoft/tfsecurity
 SHELL := /bin/bash
 
-MKDOCS_IMAGE := aquasec/mkdocs-material:tracee
+MKDOCS_IMAGE := khulnasoft/mkdocs-material:tracker
 MKDOCS_PORT := 8000
 
 .PHONY: image
@@ -70,5 +70,5 @@ mkdocs-serve:
 
 .PHONY: update-defsec
 update-defsec:
-	go get github.com/aquasecurity/defsec@latest
+	go get github.com/khulnasoft-lab/defsec@latest
 	go mod tidy
