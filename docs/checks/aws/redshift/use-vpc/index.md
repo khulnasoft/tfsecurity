@@ -65,3 +65,4 @@ The following example will pass the aws-redshift-use-vpc check.
 - [https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-vpc.html](https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-vpc.html){:target="_blank" rel="nofollow noreferrer noopener"}
 
 
+

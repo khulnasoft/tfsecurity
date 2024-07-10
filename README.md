@@ -1,10 +1,36 @@
-[![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft/tfsecurity)
-[![Docker Build](https://img.shields.io/docker/v/khulnasoft/tfsecurity?label=docker)](https://hub.docker.com/r/khulnasoft/tfsecurity)
-[![Chocolatey](https://img.shields.io/chocolatey/v/tfsecurity)](https://chocolatey.org/packages/tfsecurity)
+<p align="center">
+  <img width="354" src=".github/images/tfsecurity_worded.png">
+</p>
 
+[![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft/tfsecurity)
+[![Join Our Slack](https://img.shields.io/badge/Slack-Join-green)](https://slack.khulnasoft.com/)
+[![Docker Build](https://img.shields.io/docker/v/tfsecurity/tfsecurity?label=docker)](https://hub.docker.com/r/tfsecurity/tfsecurity)
+[![Homebrew](https://img.shields.io/badge/dynamic/json.svg?url=https://formulae.brew.sh/api/formula/tfsecurity.json&query=$.versions.stable&label=homebrew)](https://formulae.brew.sh/formula/tfsecurity)
+[![Chocolatey](https://img.shields.io/chocolatey/v/tfsecurity)](https://chocolatey.org/packages/tfsecurity)
+[![AUR version](https://img.shields.io/aur/version/tfsecurity-bin)](https://aur.archlinux.org/packages/tfsecurity-bin)
+[![VScode Extension](https://img.shields.io/visual-studio-marketplace/v/tfsecurity.tfsecurity?label=vscode)](https://marketplace.visualstudio.com/items?itemName=tfsecurity.tfsecurity)
+
+## 📣 tfsecurity to Trivy Migration
+
+As part of our goal to provide a comprehensive open source security solution for all, we have been consolidating all of our scanning-related efforts in one place, and that is [Trivy](https://github.com/aquasecurity/trivy). 
+
+Over the past year, tfsecurity has laid the foundations to Trivy's IaC & misconfigurations scanning capabilities, including Terraform scanning, which has been natively supported in Trivy for a long time now.
+
+Going forward we want to encourage the tfsecurity community to transition over to Trivy. Moving to Trivy gives you the same excellent Terraform scanning engine, with some extra benefits:
+
+1. Access to more languages and features in the same tool.
+2. Access to more integrations with tools and services through the rich ecosystem around Trivy.
+3. Commercially supported by Khulnasoft as well as by a the passionate Trivy community.
+tfsecurity will continue to remain available for the time being, although our engineering attention will be directed at Trivy going forward.
+
+## tfsecurity to Trivy migration guide
+
+For further information on how Trivy compares to tfsecurity and moving from tfsecurity to Trivy, do have a look at the [migration guide.](https://github.com/khulnasoft/tfsecurity/blob/master/tfsecurity-to-trivy-migration-guide.md)
+
+## Overview
 tfsecurity uses static analysis of your terraform code to spot potential misconfigurations.
 
-## Features
+### Features
 
 - :cloud: Checks for misconfigurations across all major (and some minor) cloud providers
 - :no_entry: Hundreds of built-in rules
@@ -17,13 +43,18 @@ tfsecurity uses static analysis of your terraform code to spot potential misconf
 - :page_with_curl: Supports multiple output formats: lovely (default), JSON, SARIF, CSV, CheckStyle, JUnit, text, Gif.
 - :hammer_and_wrench: Configurable (via CLI flags and/or config file)
 - :zap: Very fast, capable of quickly scanning huge repositories
-- :electric_plug: Plugins for popular IDEs available ([JetBrains](https://plugins.jetbrains.com/plugin/18687-tfsecurity-findings-explorer), [VSCode](https://marketplace.visualstudio.com/items?itemName=tfsecurity.tfsecurity) and [Vim](https://github.com/khulnasoft-lab/vim-tfsecurity))
+- :electric_plug: Plugins for popular IDEs available ([JetBrains](https://plugins.jetbrains.com/plugin/18687-tfsecurity-findings-explorer), [VSCode](https://marketplace.visualstudio.com/items?itemName=tfsecurity.tfsecurity) and [Vim](https://github.com/khulnasoft/vim-tfsecurity))
+- :house_with_garden: Community-driven - come and chat with us [on Slack](https://slack.khulnasoft.com/)!
 
 ## Recommended by Thoughtworks
 
 Rated _Adopt_ by the [Thoughtworks Tech Radar](https://www.thoughtworks.com/en-gb/radar/tools/tfsecurity):
 
 > For our projects using Terraform, tfsecurity has quickly become a default static analysis tool to detect potential security risks. It's easy to integrate into a CI pipeline and has a growing library of checks against all of the major cloud providers and platforms like Kubernetes. Given its ease of use, we believe tfsecurity could be a good addition to any Terraform project.
+
+## Example Output
+
+![Example screenshot](screenshot.png)
 
 ## Installation
 
@@ -94,6 +125,18 @@ To run:
 ```bash
 docker run --rm -it -v "$(pwd):/src" khulnasoft/tfsecurity /src
 ```
+
+## Use with Visual Studio Code
+
+A Visual Studio Code extension is being developed to integrate with tfsecurity results. More information can be found on the [tfsecurity Marketplace page](https://marketplace.visualstudio.com/items?itemName=tfsecurity.tfsecurity)
+
+## Use as GitHub Action
+
+If you want to run tfsecurity on your repository as a GitHub Action, you can use [https://github.com/khulnasoft/tfsecurity-pr-commenter-action](https://github.com/khulnasoft/tfsecurity-pr-commenter-action).
+
+## Use as an Azure DevOps Pipelines Task
+
+You can now install the [official tfsecurity task](https://marketplace.visualstudio.com/items?itemName=KhulnaSoftOfficial.tfsecurity-official). Please raise any issues/feature requests on the [task repository](https://github.com/khulnasoft/tfsecurity-azure-pipelines-task).
 
 ## Ignoring Warnings
 
@@ -184,9 +227,11 @@ If you want to integrate with Github Security alerts and include the output of y
 
 The alerts generated for [tfsecurity-example-project](https://github.com/tfsecurity/tfsecurity-example-project) look like this.
 
+![github security alerts](codescanning.png)
 
 When you click through the alerts for the branch, you get more information about the actual issue.
 
+![github security alerts](scanningalert.png)
 
 For more information about adding security alerts, check [the GitHub documentation](https://docs.github.com/en/code-security/repository-security-advisories/about-github-security-advisories-for-repositories)
 
@@ -208,6 +253,6 @@ We always welcome contributions; big or small, it can be documentation updates, 
 
 Made with [contributors-img](https://contrib.rocks).
 
-`tfsecurity` is an [KhulnaSoft Security](https://khulnasoft.com) open source project.
+`tfsecurity` is an [Khulnasoft Security](https://khulnasoft.com) open source project.
 Learn about our open source work and portfolio [here](https://www.khulnasoft.com/products/open-source-projects/).
-Join the community, and talk to us about any matter in [GitHub Discussion](https://github.com/khulnasoft/tfsecurity/discussions)
+Join the community, and talk to us about any matter in [GitHub Discussion](https://github.com/khulnasoft/tfsecurity/discussions) or [Slack](https://slack.khulnasoft.com).

@@ -1,9 +1,9 @@
-# Moving towards configuration scanning with Tunnel
-Overtime we've taken [tunnel][tunnel] to be the go-to scanning tool for a vareity of things. This also includes terraform scanning.
+# Moving towards configuration scanning with Trivy
+Overtime we've taken [trivy][trivy] to be the go-to scanning tool for a variety of things. This also includes terraform scanning.
 
-This section describes some differences between Tunnel and tfsecurity.
+This section describes some differences between Trivy and tfsecurity.
 
-| Feature              | Tunnel                                                  | tfsecurity                |
+| Feature              | Trivy                                                  | tfsecurity                |
 |----------------------|--------------------------------------------------------|----------------------|
 | Policy Distribution | Embedded and Updated via Registry                      | Embedded             |
 | Custom Policies      | Rego                                                   | Rego, JSON, and YAML |
@@ -12,9 +12,9 @@ This section describes some differences between Tunnel and tfsecurity.
 
 # Comparison with examples
 ## Simple scan
-### With Tunnel
+### With Trivy
 ```shell
-$ vul config <dir>
+$ trivy config <dir>
 ```
 ### With tfsecurity
 ```shell
@@ -22,9 +22,9 @@ $ tfsecurity <dir>
 ```
 
 ## Passing tfvars
-### With Tunnel
+### With Trivy
 ```shell
-$ vul --tf-vars <vars.tf> <dir>
+$ trivy --tf-vars <vars.tf> <dir>
 ```
 ### With tfsecurity
 ```shell
@@ -32,9 +32,9 @@ $ tfsecurity <dir> --tf-vars-file <vars.tf>
 ```
 
 ## Report formats
-### With Tunnel
+### With Trivy
 ```shell
-$ vul config --format <format-type> <dir>
+$ trivy config --format <format-type> <dir>
 ```
 
 ### With tfsecurity
@@ -42,6 +42,6 @@ $ vul config --format <format-type> <dir>
 $ tfsecurity <dir> --format <format-type>
 ```
 
-We welcome any feedback if you find features that today are not available with Tunnel misconfigration scanning that are available in tfsecurity. 
+We welcome any feedback if you find features that today are not available with Trivy misconfigration scanning that are available in tfsecurity. 
 
-[tunnel]: https://github.com/khulnasoft/tunnel
+[trivy]: https://github.com/aquasecurity/trivy

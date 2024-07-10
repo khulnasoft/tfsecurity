@@ -9,20 +9,20 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/google/uuid"
-	"github.com/khulnasoft-lab/defsec/pkg/scanners/options"
+	"github.com/aquasecurity/defsec/pkg/scanners/options"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
+	"github.com/google/uuid"
 
-	"github.com/khulnasoft-lab/defsec/pkg/scan"
+	"github.com/aquasecurity/defsec/pkg/scan"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
-	"github.com/khulnasoft-lab/defsec/pkg/severity"
+	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
+	"github.com/aquasecurity/defsec/pkg/severity"
 
-	"github.com/khulnasoft-lab/defsec/pkg/state"
+	"github.com/aquasecurity/defsec/pkg/state"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/config"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/legacy"
 )

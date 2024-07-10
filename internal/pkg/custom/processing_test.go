@@ -7,12 +7,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/khulnasoft-lab/defsec/pkg/scan"
-	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
-	"github.com/khulnasoft-lab/defsec/pkg/scanners/terraform/parser"
+	"github.com/aquasecurity/defsec/pkg/scan"
+	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
+	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser"
 	"github.com/liamg/memoryfs"
 
-	"github.com/khulnasoft-lab/defsec/pkg/terraform"
+	"github.com/aquasecurity/defsec/pkg/terraform"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -276,11 +276,7 @@ resource "aws_ami" "example" {
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
 			block := parseFromSource(t, test.source)[0].GetBlocks()[0]
-
-			// Create local copies of relevant variables to avoid implicit memory aliasing
-			predicateMatchSpec := test.predicateMatchSpec
-			result := evalMatchSpec(block, &predicateMatchSpec, NewEmptyCustomContext())
-
+			result := evalMatchSpec(block, &test.predicateMatchSpec, NewEmptyCustomContext())
 			assert.Equal(t, test.expected, result, "`Or` match function evaluating incorrectly.")
 		})
 	}

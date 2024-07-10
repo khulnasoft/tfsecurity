@@ -12,7 +12,7 @@ function clone_image() {
         exit 1
     fi
 
-    docker tag khulnasoft/${IMAGE} ${OWNER}/${IMAGE}
+    docker tag aquasec/${IMAGE} ${OWNER}/${IMAGE}
     echo "pushing ${OWNER}/${IMAGE}"
     docker push ${OWNER}/${IMAGE}
 }
