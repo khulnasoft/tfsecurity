@@ -1,4 +1,4 @@
-## tfsecurity - scan Terraform code
+# tfsecurity - scan Terraform code
 
 [![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft/tfsecurity)
 [![Join Our Slack](https://img.shields.io/badge/Slack-Join-green)](https://slack.khulnasoft.com/)
