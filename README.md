@@ -8,10 +8,6 @@
 [![AUR version](https://img.shields.io/aur/version/tfsecurity-bin)](https://aur.archlinux.org/packages/tfsecurity-bin)
 [![VScode Extension](https://img.shields.io/visual-studio-marketplace/v/tfsecurity.tfsecurity?label=vscode)](https://marketplace.visualstudio.com/items?itemName=tfsecurity.tfsecurity)
 
-## tfsecurity to Trivy migration guide
-
-For further information on how Trivy compares to tfsecurity and moving from tfsecurity to Trivy, do have a look at the [migration guide.](https://github.com/khulnasoft/tfsecurity/blob/master/tfsecurity-to-trivy-migration-guide.md)
-
 ## Overview
 tfsecurity uses static analysis of your terraform code to spot potential misconfigurations.
 
