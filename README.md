@@ -117,7 +117,7 @@ A Visual Studio Code extension is being developed to integrate with tfsecurity r
 
 ## Use as GitHub Action
 
-If you want to run tfsecurity on your repository as a GitHub Action, you can use [https://github.com/khulnasoft/tfsecurity-pr-commenter-action](https://github.com/khulnasoft/tfsecurity-pr-commenter-action).
+If you want to run tfsecurity on your repository as a GitHub Action, you can use [https://github.com/khulnasoft-lab/tfsecurity-pr-commenter-action](https://github.com/khulnasoft-lab/tfsecurity-pr-commenter-action).
 
 ## Use as an Azure DevOps Pipelines Task
 
