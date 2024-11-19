@@ -1,4 +1,4 @@
-name: golangci-lint
+name: 🙏🏻 Lint Test
 on:
   push:
     tags:
