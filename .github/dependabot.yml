@@ -5,25 +5,41 @@
 
 version: 2
 updates:
-  # Maintain dependencies for go-modules
+
+  # Maintain dependencies for go modules
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
       interval: "weekly"
-    ignore:
-      - dependency-name: "github.com/zclconf/go-cty"
-        versions: ["1.x"]
-        
-  # Maintain dependencies for GitHub Actions
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      prefix: ⬆
+    target-branch: "main"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "Type: Maintenance"
+    allow:
+      - dependency-name: "github.com/khulnasoft/*"
 
-  # Maintain dependencies for dockerfile
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      prefix: ⬆
+#  # Maintain dependencies for docker
+#  - package-ecosystem: "docker"
+#    directory: "/"
+#    schedule:
+#      interval: "weekly"
+#    target-branch: "dev"
+#    commit-message:
+#      prefix: "chore"
+#      include: "scope"
+#    labels:
+#      - "Type: Maintenance"
+#
+#  # Maintain dependencies for GitHub Actions
+#  - package-ecosystem: "github-actions"
+#    directory: "/"
+#    schedule:
+#      interval: "weekly"
+#    target-branch: "dev"
+#    commit-message:
+#      prefix: "chore"
+#      include: "scope"
+#    labels:
+#      - "Type: Maintenance"
