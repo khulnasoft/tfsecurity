@@ -5,10 +5,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/khulnasoft/tfsecurity/internal/pkg/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-
-	"github.com/khulnasoft/tfsecurity/internal/pkg/config"
 )
 
 func TestMinRequiredVersionFromYAML(t *testing.T) {
@@ -146,8 +145,7 @@ func load(t *testing.T, filename, content string) *config.Config {
 
 	configFileName := fmt.Sprintf("%s/%s", dir, filename)
 
-	// Use stricter permissions for the config file
-	err = os.WriteFile(configFileName, []byte(content), 0600)
+	err = os.WriteFile(configFileName, []byte(content), os.ModePerm)
 	require.NoError(t, err)
 
 	c, err := config.LoadConfig(configFileName)

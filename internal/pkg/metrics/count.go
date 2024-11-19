@@ -2,7 +2,6 @@ package metrics
 
 import (
 	"fmt"
-	"math"
 	"sync"
 )
 
@@ -51,17 +50,5 @@ func (c *counter) Value() string {
 func (c *counter) Increment(delta int) {
 	c.Lock()
 	defer c.Unlock()
-
-	// Check for potential overflow or underflow
-	if delta < 0 {
-		if uint64(-delta) > c.count {
-			panic("integer underflow detected")
-		}
-		c.count -= uint64(-delta)
-	} else {
-		if uint64(delta) > (math.MaxUint64 - c.count) {
-			panic("integer overflow detected")
-		}
-		c.count += uint64(delta)
-	}
+	c.count += uint64(delta)
 }

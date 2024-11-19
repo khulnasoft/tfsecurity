@@ -1,7 +1,7 @@
 IMAGE := tfsecurity/tfsecurity
 SHELL := /bin/bash
 
-MKDOCS_IMAGE := khulnasoft/mkdocs-material:tracee
+MKDOCS_IMAGE := khulnasoft/mkdocs-material:tunnel-operator
 MKDOCS_PORT := 8000
 
 .PHONY: image

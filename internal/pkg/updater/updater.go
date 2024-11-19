@@ -6,10 +6,9 @@ import (
 	"net/http"
 	"runtime"
 
+	"github.com/khulnasoft/tfsecurity/version"
 	semver "github.com/hashicorp/go-version"
 	"github.com/inconshreveable/go-update"
-
-	"github.com/khulnasoft/tfsecurity/version"
 )
 
 type githubRelease struct {
@@ -96,6 +95,5 @@ func resolveDownloadUrl(latest string) string {
 		suffix = ".exe"
 	}
 
-	return fmt.Sprintf("https://github.com/khulnasoft/tfsecurity/releases/download/tfsecurity-%s-%s-%s%s",
-		latest, runtime.GOOS, runtime.GOARCH, suffix)
+	return fmt.Sprintf("https://github.com/khulnasoft/tfsecurity/releases/download/%s/tfsecurity-%s-%s%s", latest, runtime.GOOS, runtime.GOARCH, suffix)
 }
