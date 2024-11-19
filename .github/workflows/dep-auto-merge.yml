@@ -18,9 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.ORG_REPO_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: dependabot-auto-merge@v1.0.1
+      - uses: khulnasoft-lab/dependabot-auto-merge@master
         with:
-          github-token: ${{ secrets.ORG_REPO_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           target: all
