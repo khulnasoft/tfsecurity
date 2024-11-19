@@ -7,14 +7,14 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/liamg/memoryfs"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+
 	"github.com/khulnasoft-lab/defsec/pkg/scan"
 	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
 	"github.com/khulnasoft-lab/defsec/pkg/scanners/terraform/parser"
-	"github.com/liamg/memoryfs"
-
 	"github.com/khulnasoft-lab/defsec/pkg/terraform"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func init() {

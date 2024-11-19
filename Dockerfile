@@ -3,7 +3,7 @@ FROM alpine:latest
 # install git
 RUN apk add --no-cache git
 
-COPY tfsecurity /usr/bin/tfsecurity
+COPY bin/linux/tfsecurity-linux-amd64 /usr/bin/tfsecurity
 
 ## use a non-privileged user
 RUN adduser -D tfsecurity

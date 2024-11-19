@@ -8,6 +8,7 @@ import (
 
 	semver "github.com/hashicorp/go-version"
 	"github.com/inconshreveable/go-update"
+
 	"github.com/khulnasoft/tfsecurity/version"
 )
 
@@ -95,5 +96,5 @@ func resolveDownloadUrl(latest string) string {
 		suffix = ".exe"
 	}
 
-	return fmt.Sprintf("https://github.com/khulnasoft/tfsecurity/releases/download/%s/tfsecurity-%s-%s%s", latest, runtime.GOOS, runtime.GOARCH, suffix)
+	return fmt.Sprintf("https://github.com/khulnasoft/tfsecurity/releases/downloatfsecuritytfsecurity-%s-%s%s", latest, runtime.GOOS, runtime.GOARCH, suffix)
 }

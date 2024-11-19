@@ -6,13 +6,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/khulnasoft-lab/defsec/pkg/scan"
-	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
-
-	"github.com/khulnasoft-lab/defsec/pkg/formatters"
-	"github.com/khulnasoft-lab/defsec/pkg/severity"
 	"github.com/liamg/clinch/terminal"
 	"github.com/liamg/tml"
+
+	"github.com/khulnasoft-lab/defsec/pkg/formatters"
+	"github.com/khulnasoft-lab/defsec/pkg/scan"
+	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
+	"github.com/khulnasoft-lab/defsec/pkg/severity"
 )
 
 var severityFormat map[severity.Severity]string

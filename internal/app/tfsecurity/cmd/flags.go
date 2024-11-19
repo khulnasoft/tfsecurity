@@ -10,20 +10,17 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/khulnasoft-lab/defsec/pkg/scanners/options"
-	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
-
-	"github.com/khulnasoft-lab/defsec/pkg/scan"
-
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
+	"github.com/khulnasoft-lab/defsec/pkg/scan"
+	"github.com/khulnasoft-lab/defsec/pkg/scanners/options"
 	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
 	"github.com/khulnasoft-lab/defsec/pkg/severity"
-
 	"github.com/khulnasoft-lab/defsec/pkg/state"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/config"
+	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/legacy"
 )
 
@@ -355,7 +352,7 @@ func remoteConfigDownloaded() bool {
 		return false
 	}
 
-	if err := os.WriteFile(tempFile, configContent, 0600); err != nil {
+	if err := os.WriteFile(tempFile, configContent, os.ModePerm); err != nil {
 		return false
 	}
 	configFile = tempFile
@@ -381,7 +378,7 @@ func remoteCustomCheckDownloaded() bool {
 		return false
 	}
 
-	if err := os.WriteFile(tempFile, customCheckContent, 0600); err != nil {
+	if err := os.WriteFile(tempFile, customCheckContent, os.ModePerm); err != nil {
 		return false
 	}
 	customCheckDir = customTempDir

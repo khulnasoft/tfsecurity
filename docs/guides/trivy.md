@@ -1,9 +1,9 @@
-# Moving towards configuration scanning with Trivy
-Overtime we've taken [trivy][trivy] to be the go-to scanning tool for a variety of things. This also includes terraform scanning.
+# Moving towards configuration scanning with Triangle
+Overtime we've taken [triangle][triangle] to be the go-to scanning tool for a variety of things. This also includes terraform scanning.
 
-This section describes some differences between Trivy and tfsecurity.
+This section describes some differences between Triangle and tfsecurity.
 
-| Feature              | Trivy                                                  | tfsecurity                |
+| Feature              | Triangle                                                  | tfsecurity                |
 |----------------------|--------------------------------------------------------|----------------------|
 | Policy Distribution | Embedded and Updated via Registry                      | Embedded             |
 | Custom Policies      | Rego                                                   | Rego, JSON, and YAML |
@@ -12,9 +12,9 @@ This section describes some differences between Trivy and tfsecurity.
 
 # Comparison with examples
 ## Simple scan
-### With Trivy
+### With Triangle
 ```shell
-$ trivy config <dir>
+$ triangle config <dir>
 ```
 ### With tfsecurity
 ```shell
@@ -22,9 +22,9 @@ $ tfsecurity <dir>
 ```
 
 ## Passing tfvars
-### With Trivy
+### With Triangle
 ```shell
-$ trivy --tf-vars <vars.tf> <dir>
+$ triangle --tf-vars <vars.tf> <dir>
 ```
 ### With tfsecurity
 ```shell
@@ -32,9 +32,9 @@ $ tfsecurity <dir> --tf-vars-file <vars.tf>
 ```
 
 ## Report formats
-### With Trivy
+### With Triangle
 ```shell
-$ trivy config --format <format-type> <dir>
+$ triangle config --format <format-type> <dir>
 ```
 
 ### With tfsecurity
@@ -42,6 +42,6 @@ $ trivy config --format <format-type> <dir>
 $ tfsecurity <dir> --format <format-type>
 ```
 
-We welcome any feedback if you find features that today are not available with Trivy misconfigration scanning that are available in tfsecurity. 
+We welcome any feedback if you find features that today are not available with Triangle misconfigration scanning that are available in tfsecurity. 
 
-[trivy]: https://github.com/aquasecurity/trivy
+[triangle]: https://github.com/khulnasoft/triangle

@@ -11,11 +11,11 @@ import (
 	"testing"
 
 	"github.com/owenrumney/go-sarif/v2/sarif"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 
 	"github.com/khulnasoft-lab/defsec/pkg/scan"
 	"github.com/khulnasoft/tfsecurity/internal/app/tfsecurity/cmd"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func runWithArgs(args ...string) (stdout string, stderr string, exit int) {

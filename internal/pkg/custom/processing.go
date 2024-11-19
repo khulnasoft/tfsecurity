@@ -5,10 +5,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/khulnasoft-lab/defsec/pkg/providers"
 	"github.com/zclconf/go-cty/cty"
 	"github.com/zclconf/go-cty/cty/gocty"
 
+	"github.com/khulnasoft-lab/defsec/pkg/providers"
 	"github.com/khulnasoft-lab/defsec/pkg/rules"
 	"github.com/khulnasoft-lab/defsec/pkg/scan"
 	"github.com/khulnasoft-lab/defsec/pkg/terraform"

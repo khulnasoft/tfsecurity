@@ -6,9 +6,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/khulnasoft-lab/defsec/pkg/rules"
-
 	"github.com/spf13/cobra"
+
+	"github.com/khulnasoft-lab/defsec/pkg/rules"
 )
 
 var (
@@ -35,7 +35,7 @@ func main() {
 
 var rootCmd = &cobra.Command{
 	Use:   "tfsecurity-docs",
-	Short: "tfsecurity-docs generates documentation for the checks in tfsecurity",
+	Short: "tfsecurity-docs generates documentation for the checktfsecuritytfsecurity",
 	Long:  `tfsecurity-docs generates the content for the root README and also can generate the missing base pages for the wiki`,
 	RunE: func(_ *cobra.Command, _ []string) error {
 

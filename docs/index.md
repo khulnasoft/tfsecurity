@@ -9,22 +9,22 @@ hide:
 <br/>
 <br/>
 
-## 📣 tfsecurity to Trivy Migration
+## 📣 tfsecurity to Triangle Migration
 
-As part of our goal to provide a comprehensive open source security solution for all, we have been consolidating all of our scanning-related efforts in one place, and that is [Trivy](https://github.com/aquasecurity/trivy). 
+As part of our goal to provide a comprehensive open source security solution for all, we have been consolidating all of our scanning-related efforts in one place, and that is [Triangle](https://github.com/khulnasoft/triangle). 
 
-Over the past year, tfsecurity has laid the foundations to Trivy's IaC & misconfigurations scanning capabilities, including Terraform scanning, which has been natively supported in Trivy for a long time now.
+Over the past year, tfsecurity has laid the foundations to Triangle's IaC & misconfigurations scanning capabilities, including Terraform scanning, which has been natively supported in Triangle for a long time now.
 
-Going forward we want to encourage the tfsecurity community to transition over to Trivy. Moving to Trivy gives you the same excellent Terraform scanning engine, with some extra benefits:
+Going forward we want to encourage the tfsecurity community to transition over to Triangle. Moving to Triangle gives you the same excellent Terraform scanning engine, with some extra benefits:
 
 1. Access to more languages and features in the same tool.
-2. Access to more integrations with tools and services through the rich ecosystem around Trivy.
-3. Commercially supported by Khulnasoft as well as by a the passionate Trivy community.
-tfsecurity will continue to remain available for the time being, although our engineering attention will be directed at Trivy going forward.
+2. Access to more integrations with tools and services through the rich ecosystem around Triangle.
+3. Commercially supported by KhulnaSoft as well as by a the passionate Triangle community.
+tfsecurity will continue to remain available for the time being, although our engineering attention will be directed at Triangle going forward.
 
-## tfsecurity to Trivy migration guide
+## tfsecurity to Triangle migration guide
 
-For further information on how Trivy compares to tfsecurity and moving from tfsecurity to Trivy, do have a look at the [migration guide.](https://github.com/khulnasoft/tfsecurity/blob/master/tfsecurity-to-trivy-migration-guide.md)
+For further information on how Triangle compares to tfsecurity and moving from tfsecurity to Triangle, do have a look at the [migration guide.](https://github.com/khulnasoft/tfsecurity/blob/master/tfsecurity-to-triangle-migration-guide.md)
 
 ## tfsecurity
 
@@ -43,11 +43,11 @@ Designed to run locally and in your CI pipelines, developer-friendly output and 
   <figcaption>Demo: Misconfiguration Detection</figcaption>
 </figure>
 
-`tfsecurity` is an [Khulnasoft Security][aquasec] open source project.  
+`tfsecurity` is an [KhulnaSoft Security][khulnasoft] open source project.  
 Learn about our open source work and portfolio [here][oss].  
 Contact us about any matter by opening a GitHub Discussion [here][discussions]
 
 
-[aquasec]: https://khulnasoft.com
+[khulnasoft]: https://khulnasoft.com
 [oss]: https://www.khulnasoft.com/products/open-source-projects/
 [discussions]: https://github.com/khulnasoft/tfsecurity/discussions

@@ -1,12 +1,31 @@
-# tfsecurity - scan Terraform code
+<p align="center">
+  <img width="354" src=".github/images/tfsecurity_worded.png">
+</p>
 
 [![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft/tfsecurity)
 [![Join Our Slack](https://img.shields.io/badge/Slack-Join-green)](https://slack.khulnasoft.com/)
-[![Docker Build](https://img.shields.io/docker/v/khulnasoft/tfsecurity?label=docker)](https://hub.docker.com/r/khulnasoft/tfsecurity)
+[![Docker Build](https://img.shields.io/docker/v/tfsecurity/tfsecurity?label=docker)](https://hub.docker.com/r/tfsecurity/tfsecurity)
 [![Homebrew](https://img.shields.io/badge/dynamic/json.svg?url=https://formulae.brew.sh/api/formula/tfsecurity.json&query=$.versions.stable&label=homebrew)](https://formulae.brew.sh/formula/tfsecurity)
 [![Chocolatey](https://img.shields.io/chocolatey/v/tfsecurity)](https://chocolatey.org/packages/tfsecurity)
 [![AUR version](https://img.shields.io/aur/version/tfsecurity-bin)](https://aur.archlinux.org/packages/tfsecurity-bin)
 [![VScode Extension](https://img.shields.io/visual-studio-marketplace/v/tfsecurity.tfsecurity?label=vscode)](https://marketplace.visualstudio.com/items?itemName=tfsecurity.tfsecurity)
+
+## 📣 tfsecurity to Triangle Migration
+
+As part of our goal to provide a comprehensive open source security solution for all, we have been consolidating all of our scanning-related efforts in one place, and that is [Triangle](https://github.com/khulnasoft/triangle). 
+
+Over the past year, tfsecurity has laid the foundations to Triangle's IaC & misconfigurations scanning capabilities, including Terraform scanning, which has been natively supported in Triangle for a long time now.
+
+Going forward we want to encourage the tfsecurity community to transition over to Triangle. Moving to Triangle gives you the same excellent Terraform scanning engine, with some extra benefits:
+
+1. Access to more languages and features in the same tool.
+2. Access to more integrations with tools and services through the rich ecosystem around Triangle.
+3. Commercially supported by KhulnaSoft as well as by a the passionate Triangle community.
+tfsecurity will continue to remain available for the time being, although our engineering attention will be directed at Triangle going forward.
+
+## tfsecurity to Triangle migration guide
+
+For further information on how Triangle compares to tfsecurity and moving from tfsecurity to Triangle, do have a look at the [migration guide.](https://github.com/khulnasoft/tfsecurity/blob/master/tfsecurity-to-triangle-migration-guide.md)
 
 ## Overview
 tfsecurity uses static analysis of your terraform code to spot potential misconfigurations.
@@ -113,11 +132,11 @@ A Visual Studio Code extension is being developed to integrate with tfsecurity r
 
 ## Use as GitHub Action
 
-If you want to run tfsecurity on your repository as a GitHub Action, you can use [https://github.com/khulnasoft-lab/tfsecurity-pr-commenter-action](https://github.com/khulnasoft-lab/tfsecurity-pr-commenter-action).
+If you want to run tfsecurity on your repository as a GitHub Action, you can use [https://github.com/khulnasoft/tfsecurity-pr-commenter-action](https://github.com/khulnasoft/tfsecurity-pr-commenter-action).
 
 ## Use as an Azure DevOps Pipelines Task
 
-You can now install the [official tfsecurity task](https://marketplace.visualstudio.com/items?itemName=KhulnaSoftOfficial.tfsecurity-official). Please raise any issues/feature requests on the [task repository](https://github.com/khulnasoft-lab/tfsecurity-azure-pipelines-task).
+You can now install the [official tfsecurity task](https://marketplace.visualstudio.com/items?itemName=KhulnaSofturityOfficial.tfsecurity-official). Please raise any issues/feature requests on the [task repository](https://github.com/khulnasoft/tfsecurity-azure-pipelines-task).
 
 ## Ignoring Warnings
 
@@ -206,7 +225,7 @@ to specify your desired format.
 ## GitHub Security Alerts
 If you want to integrate with Github Security alerts and include the output of your tfsecurity checks you can use the [tfsecurity-sarif-action](https://github.com/marketplace/actions/run-tfsecurity-with-sarif-upload) Github action to run the static analysis then upload the results to the security alerts tab.
 
-The alerts generated for [tfsecurity-example-project](https://github.com/khulnasoft-lab/tfsecurity-example-project) look like this.
+The alerts generated for [tfsecurity-example-project](https://github.com/tfsecurity/tfsecurity-example-project) look like this.
 
 ![github security alerts](codescanning.png)
 
@@ -234,6 +253,6 @@ We always welcome contributions; big or small, it can be documentation updates, 
 
 Made with [contributors-img](https://contrib.rocks).
 
-`tfsecurity` is an [Khulnasoft Security](https://khulnasoft.com) open source project.
+`tfsecurity` is an [KhulnaSoft Security](https://khulnasoft.com) open source project.
 Learn about our open source work and portfolio [here](https://www.khulnasoft.com/products/open-source-projects/).
 Join the community, and talk to us about any matter in [GitHub Discussion](https://github.com/khulnasoft/tfsecurity/discussions) or [Slack](https://slack.khulnasoft.com).

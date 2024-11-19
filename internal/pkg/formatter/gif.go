@@ -1,11 +1,11 @@
 package formatter
 
 import (
-	"github.com/khulnasoft-lab/defsec/pkg/scan"
-	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
+	"github.com/liamg/gifwrap/pkg/ascii"
 
 	"github.com/khulnasoft-lab/defsec/pkg/formatters"
-	"github.com/liamg/gifwrap/pkg/ascii"
+	"github.com/khulnasoft-lab/defsec/pkg/scan"
+	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
 )
 
 func GifWithMetrics(metrics scanner.Metrics, theme string, withColours bool) func(b formatters.ConfigurableFormatter, results scan.Results) error {

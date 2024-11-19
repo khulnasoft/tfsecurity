@@ -8,8 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/khulnasoft-lab/defsec/pkg/severity"
 	"gopkg.in/yaml.v2"
+
+	"github.com/khulnasoft-lab/defsec/pkg/severity"
 )
 
 type Config struct {

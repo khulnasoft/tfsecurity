@@ -19,3 +19,16 @@ vendor/
 .terraform*
 
 /site
+
+# tooling
+/bin
+/.tool-versions
+/.tmp
+
+# builds
+/dist
+/snapshot
+
+# testing
+.cover
+coverage.txt
