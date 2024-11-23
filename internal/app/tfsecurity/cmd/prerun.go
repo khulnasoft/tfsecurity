@@ -6,12 +6,11 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/liamg/tml"
-	"github.com/spf13/cobra"
-
 	"github.com/khulnasoft/tfsecurity/internal/pkg/ignores"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/updater"
 	"github.com/khulnasoft/tfsecurity/version"
+	"github.com/liamg/tml"
+	"github.com/spf13/cobra"
 )
 
 func prerun(cmd *cobra.Command, args []string) error {

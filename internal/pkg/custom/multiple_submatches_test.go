@@ -3,10 +3,10 @@ package custom
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
-
 	"github.com/aquasecurity/defsec/pkg/providers"
 	"github.com/aquasecurity/defsec/pkg/scan"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func init() {

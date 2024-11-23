@@ -1,7 +1,7 @@
 IMAGE := tfsecurity/tfsecurity
 SHELL := /bin/bash
 
-MKDOCS_IMAGE := khulnasoft/mkdocs-material:starboard
+MKDOCS_IMAGE := khulnasoft/mkdocs-material:tracee
 MKDOCS_PORT := 8000
 
 .PHONY: image
@@ -43,7 +43,7 @@ typos:
 
 .PHONY: quality
 quality:
-	which golangci-lint || go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.52.2
+	which golangci-lint || go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.46.2
 	golangci-lint run
 
 .PHONY: fix-typos

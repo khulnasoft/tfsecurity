@@ -4,24 +4,26 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
 
+	"github.com/aquasecurity/defsec/pkg/scanners/options"
 	"github.com/google/uuid"
+	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
+
+	"github.com/aquasecurity/defsec/pkg/scan"
+
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
 	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
 	"github.com/aquasecurity/defsec/pkg/severity"
+
 	"github.com/aquasecurity/defsec/pkg/state"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/config"
-	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/legacy"
 )
 
@@ -341,35 +343,21 @@ func configureCustomChecks(options []options.ScannerOption, dir string) ([]optio
 func remoteConfigDownloaded() bool {
 	tempFile := filepath.Join(os.TempDir(), filepath.Base(configFileUrl))
 
-	// Use HTTPS to ensure secure communication.
-	if !strings.HasPrefix(configFileUrl, "https://") {
-		log.Printf("Insecure URL: %s", configFileUrl)
-		return false
-	}
-
-	resp, err := http.Get(configFileUrl) // #nosec G107 - Allow downloading the file.
+	/* #nosec */
+	resp, err := http.Get(configFileUrl)
 	if err != nil || resp.StatusCode != http.StatusOK {
-		log.Printf("Failed to download config file: %v, status code: %d", err, resp.StatusCode)
 		return false
 	}
-	defer func() {
-		if cerr := resp.Body.Close(); cerr != nil {
-			log.Printf("Failed to close response body: %v", cerr)
-		}
-	}()
+	defer func() { _ = resp.Body.Close() }()
 
 	configContent, err := io.ReadAll(resp.Body)
 	if err != nil {
-		log.Printf("Failed to read config content: %v", err)
 		return false
 	}
 
-	// Use stricter permissions for the temporary file.
-	if err := os.WriteFile(tempFile, configContent, 0600); err != nil {
-		log.Printf("Failed to write config content to temp file: %v", err)
+	if err := os.WriteFile(tempFile, configContent, os.ModePerm); err != nil {
 		return false
 	}
-
 	configFile = tempFile
 	return true
 }
@@ -393,7 +381,7 @@ func remoteCustomCheckDownloaded() bool {
 		return false
 	}
 
-	if err := os.WriteFile(tempFile, customCheckContent, 0600); err != nil {
+	if err := os.WriteFile(tempFile, customCheckContent, os.ModePerm); err != nil {
 		return false
 	}
 	customCheckDir = customTempDir

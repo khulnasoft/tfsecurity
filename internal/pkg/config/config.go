@@ -8,9 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"gopkg.in/yaml.v2"
-
 	"github.com/aquasecurity/defsec/pkg/severity"
+	"gopkg.in/yaml.v2"
 )
 
 type Config struct {

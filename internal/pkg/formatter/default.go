@@ -6,13 +6,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/liamg/clinch/terminal"
-	"github.com/liamg/tml"
-
-	"github.com/aquasecurity/defsec/pkg/formatters"
 	"github.com/aquasecurity/defsec/pkg/scan"
 	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
+
+	"github.com/aquasecurity/defsec/pkg/formatters"
 	"github.com/aquasecurity/defsec/pkg/severity"
+	"github.com/liamg/clinch/terminal"
+	"github.com/liamg/tml"
 )
 
 var severityFormat map[severity.Severity]string

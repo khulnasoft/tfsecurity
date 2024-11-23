@@ -8,12 +8,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	survey "github.com/AlecAivazis/survey/v2"
-	"github.com/spf13/cobra"
-
 	"github.com/aquasecurity/defsec/pkg/scan"
+
 	"github.com/aquasecurity/defsec/pkg/scanners/terraform"
+
+	survey "github.com/AlecAivazis/survey/v2"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
+	"github.com/spf13/cobra"
 )
 
 var passTests []string
@@ -36,7 +37,7 @@ func main() {
 
 var rootCmd = &cobra.Command{
 	Use:   "tfsecurity-checkgen",
-	Short: "tfsecurity-checkgen tfsecuritytfsecurity tool for generating and validating custom check files.",
+	Short: "tfsecurity-checkgen is a tfsecurity tool for generating and validating custom check files.",
 	Long: `tfsecurity is a simple tool for generating and validating custom checks file.
 Custom checks are defined as json and stored in the .tfsecurity directory of the folder being checked.
 `,

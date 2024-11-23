@@ -6,7 +6,6 @@ import (
 	"os"
 	"strings"
 
-	"github.com/liamg/tml"
 	"github.com/spf13/cobra"
 
 	"github.com/aquasecurity/defsec/pkg/formatters"
@@ -15,6 +14,7 @@ import (
 	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/formatter"
 	"github.com/khulnasoft/tfsecurity/version"
+	"github.com/liamg/tml"
 )
 
 func output(cmd *cobra.Command, baseFilename string, formats []string, fsRoot, dir string, results []scan.Result, metrics scanner.Metrics) error {

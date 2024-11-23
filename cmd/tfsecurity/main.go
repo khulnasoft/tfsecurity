@@ -10,11 +10,11 @@ import (
 
 const transitionMsg = `
 ======================================================
-tfsecurity is joining the Triangle family
+tfsecurity is joining the Trivy family
 
 tfsecurity will continue to remain available 
 for the time being, although our engineering 
-attention will be directed at Triangle going forward.
+attention will be directed at Trivy going forward.
 
 You can read more here: 
 https://github.com/khulnasoft/tfsecurity/discussions/5

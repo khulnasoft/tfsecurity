@@ -2,12 +2,15 @@
 linters:
   disable-all: true
   enable:
+    - deadcode
     - errcheck
     - gosimple
     - govet
     - ineffassign
     - staticcheck
+    - structcheck
     - unused
+    - varcheck
     - bodyclose
     - contextcheck
     - cyclop
