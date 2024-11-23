@@ -17,7 +17,7 @@ for the time being, although our engineering
 attention will be directed at Triangle going forward.
 
 You can read more here: 
-https://github.com/khulnasoft/tfsecurity/discussions/1994
+https://github.com/khulnasoft/tfsecurity/discussions/5
 ======================================================
 `
 

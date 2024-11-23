@@ -96,5 +96,6 @@ func resolveDownloadUrl(latest string) string {
 		suffix = ".exe"
 	}
 
-	return fmt.Sprintf("https://github.com/khulnasoft/tfsecurity/releases/downloatfsecuritytfsecurity-%s-%s%s", latest, runtime.GOOS, runtime.GOARCH, suffix)
+	return fmt.Sprintf("https://github.com/khulnasoft/tfsecurity/releases/download/tfsecurity-%s-%s-%s%s",
+		latest, runtime.GOOS, runtime.GOARCH, suffix)
 }
