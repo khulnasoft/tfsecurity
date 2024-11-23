@@ -16,7 +16,7 @@ linters:
     - goimports
     - gosec
     - gocritic
-    - copyloopvar    # Replaces `exportloopref`
+    # Removed `copyloopvar` as it's not a valid linter for `golangci-lint` v1.52.2
 
 linters-settings:
   cyclop:
