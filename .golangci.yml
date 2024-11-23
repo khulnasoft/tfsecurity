@@ -1,3 +1,4 @@
+
 linters:
   disable-all: true
   enable:
@@ -6,32 +7,27 @@ linters:
     - govet
     - ineffassign
     - staticcheck
-    - unused        # Replaces `deadcode`, `structcheck`, and `varcheck`
+    - unused
     - bodyclose
     - contextcheck
     - cyclop
     - durationcheck
     - errname
     - errorlint
+    - exportloopref
     - goimports
     - gosec
     - gocritic
-    # Removed `copyloopvar` as it's not a valid linter for `golangci-lint` v1.52.2
 
-linters-settings:
+linters-settings: 
   cyclop:
     max-complexity: 15
   gocritic:
     disabled-checks:
       - singleCaseSwitch
-  gosec:
-    # Optional: exclude rules for specific GoSec checks if needed
-    exclude:
-      - G104  # Ignore warnings for unchecked errors
-      - G306  # Allow custom handling for file permissions
-  
+
 issues:
   exclude-rules:
-    - path: ".*"        # Exclude rules for all files (adjust as needed)
+    - path: "."
       linters:
         - typecheck

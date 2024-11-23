@@ -1,12 +1,12 @@
-IMAGE := tsecurity/tsecurity
+IMAGE := tfsecurity/tfsecurity
 SHELL := /bin/bash
 
-MKDOCS_IMAGE := aquasec/mkdocs-material:tracee
+MKDOCS_IMAGE := khulnasoft/mkdocs-material:starboard
 MKDOCS_PORT := 8000
 
 .PHONY: image
 image:
-	docker build --build-arg tsecurity_version=$(TRAVIS_TAG) -t $(IMAGE) .
+	docker build --build-arg tfsecurity_version=$(TRAVIS_TAG) -t $(IMAGE) .
 
 .PHONY: test
 test:
@@ -20,7 +20,7 @@ build:
 
 .PHONY: generate-docs
 generate-docs:
-	@go run ./cmd/tsecurity-docs
+	@go run ./cmd/tfsecurity-docs
 
 .PHONY: publish-docs
 publish-docs: generate-docs
@@ -39,7 +39,7 @@ tagger:
 .PHONY: typos
 typos:
 	which codespell || pip install codespell
-	codespell -S _examples,.tsecurity,.terraform,.git,go.sum --ignore-words .codespellignore -f
+	codespell -S _examples,.tfsecurity,.terraform,.git,go.sum --ignore-words .codespellignore -f
 
 .PHONY: quality
 quality:
@@ -70,5 +70,5 @@ mkdocs-serve:
 
 .PHONY: update-defsec
 update-defsec:
-	go get github.com/khulnasoft-lab/defsec@latest
+	go get github.com/aquasecurity/defsec@latest
 	go mod tidy

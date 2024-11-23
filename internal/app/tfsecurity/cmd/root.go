@@ -10,10 +10,10 @@ import (
 	"github.com/Masterminds/semver"
 	"github.com/spf13/cobra"
 
-	debugging "github.com/khulnasoft-lab/defsec/pkg/debug"
-	"github.com/khulnasoft-lab/defsec/pkg/extrafs"
-	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
-	"github.com/khulnasoft-lab/defsec/pkg/scanners/terraform/executor"
+	debugging "github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/aquasecurity/defsec/pkg/extrafs"
+	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
+	"github.com/aquasecurity/defsec/pkg/scanners/terraform/executor"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/config"
 	"github.com/khulnasoft/tfsecurity/version"
 )

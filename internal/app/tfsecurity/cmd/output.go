@@ -9,10 +9,10 @@ import (
 	"github.com/liamg/tml"
 	"github.com/spf13/cobra"
 
-	"github.com/khulnasoft-lab/defsec/pkg/formatters"
-	"github.com/khulnasoft-lab/defsec/pkg/providers"
-	"github.com/khulnasoft-lab/defsec/pkg/scan"
-	scanner "github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
+	"github.com/aquasecurity/defsec/pkg/formatters"
+	"github.com/aquasecurity/defsec/pkg/providers"
+	"github.com/aquasecurity/defsec/pkg/scan"
+	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/formatter"
 	"github.com/khulnasoft/tfsecurity/version"
 )

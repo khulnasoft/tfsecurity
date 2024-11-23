@@ -11,7 +11,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/khulnasoft-lab/defsec/pkg/severity"
+	"github.com/aquasecurity/defsec/pkg/severity"
 )
 
 type ChecksFile struct {

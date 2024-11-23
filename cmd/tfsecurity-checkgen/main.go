@@ -11,8 +11,8 @@ import (
 	survey "github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
 
-	"github.com/khulnasoft-lab/defsec/pkg/scan"
-	"github.com/khulnasoft-lab/defsec/pkg/scanners/terraform"
+	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/aquasecurity/defsec/pkg/scanners/terraform"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
 )
 
