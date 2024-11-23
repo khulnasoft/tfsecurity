@@ -1,6 +1,6 @@
 # Signing
 
-All tfsecurity binaries are signed with out signing key `D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE`. The steps below detail how to verify the signature of the keys.
+All tfsecurity binaries are signed with out signing key `CF64D06A1E6F774769DF7F4F612D823DECB96A43`. The steps below detail how to verify the signature of the keys.
 
 
 ## Public Key
@@ -76,7 +76,7 @@ nX5QmAEwF/nBYV3Du7TIvHtz91yL8A==
     ```
     check the output is
     ```
-    pub  rsa4096 2021-05-20 [SC]       D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE
+    pub  rsa4096 2021-05-20 [SC]       CF64D06A1E6F774769DF7F4F612D823DECB96A43
     uid  [ultimate] Mamun Signing (Code signing for tfsecurity) <signing@tfsecurity.dev>
     sub  rsa4096 2021-05-20 [E]
     ```
@@ -84,12 +84,12 @@ nX5QmAEwF/nBYV3Du7TIvHtz91yL8A==
    
 5. Assuming it is `tfsecurity-linux-amd64` the verify command below should be run, passing in the sig file then the binary file
    ```
-   gpg --verify tfsecurity-linux-amd64.D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE.sig tfsecurity-linux-amd64
+   gpg --verify tfsecurity-linux-amd64.CF64D06A1E6F774769DF7F4F612D823DECB96A43.sig tfsecurity-linux-amd64
    ```
    This should give you a similar output to that below - the key part is that it is signed and has a `Good signature`
    ```
    gpg: Signature made Fri 09 Jul 2021 11:41:22 BST
-   gpg:                using RSA key D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE
+   gpg:                using RSA key CF64D06A1E6F774769DF7F4F612D823DECB96A43
    gpg: Good signature from "Mamun Signing (Code signing for tfsecurity) <signing@tfsecurity.dev>" [ultimate]
 
    ```

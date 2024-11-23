@@ -93,7 +93,7 @@ Please note that using `go install` will install directly from the `master` bran
 
 ### Signing
 
-The binaries on the [releases page](https://github.com/khulnasoft/tfsecurity/releases) are signed with the tfsecurity signing key `D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE`
+The binaries on the [releases page](https://github.com/khulnasoft/tfsecurity/releases) are signed with the tfsecurity signing key `CF64D06A1E6F774769DF7F4F612D823DECB96A43`
 
 Form more information check the [signing page](SIGNING.md) for instructions on verification.
 

@@ -42,7 +42,7 @@ changelog:
 
 signs:
   - artifacts: binary
-    signature: "${artifact}.D66B222A3EA4C25D5D1A097FC34ACEFB46EC39CE.sig"
+    signature: "${artifact}.CF64D06A1E6F774769DF7F4F612D823DECB96A43.sig"
 
 archives:
   - format: binary
