@@ -4,7 +4,7 @@
 
 [![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft/tfsecurity)
 [![Join Our Slack](https://img.shields.io/badge/Slack-Join-green)](https://slack.khulnasoft.com/)
-[![Docker Build](https://img.shields.io/docker/v/tfsecurity/tfsecurity?label=docker)](https://hub.docker.com/r/tfsecurity/tfsecurity)
+[![Docker Build](https://img.shields.io/docker/v/tfsecurity/tfsecurity?label=docker)](https://hub.docker.com/r/khulnasoft/tfsecurity)
 [![Homebrew](https://img.shields.io/badge/dynamic/json.svg?url=https://formulae.brew.sh/api/formula/tfsecurity.json&query=$.versions.stable&label=homebrew)](https://formulae.brew.sh/formula/tfsecurity)
 [![Chocolatey](https://img.shields.io/chocolatey/v/tfsecurity)](https://chocolatey.org/packages/tfsecurity)
 [![AUR version](https://img.shields.io/aur/version/tfsecurity-bin)](https://aur.archlinux.org/packages/tfsecurity-bin)
