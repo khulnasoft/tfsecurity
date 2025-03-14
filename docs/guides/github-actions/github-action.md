@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@main
 
       - name: tfsecurity
-        uses: tfsecurity/tfsecurity-sarif-action@master
+        uses: khulnasoft/tfsecurity-sarif-action@master
         with:
           sarif_file: tfsecurity.sarif         
 
@@ -70,7 +70,7 @@ If you have code that is deeper in the github repo, you can use `working_directo
 ```yaml
 {% raw %}
 - name: tfsecurity
-  uses: tfsecurity/tfsecurity-sarif-action@v0.0.3
+  uses: khulnasoft/tfsecurity-sarif-action@v0.0.3
   with:
     working_directory: terraform/relevant
     sarif_file: tfsecurity.sarif         

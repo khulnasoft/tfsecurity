@@ -1,4 +1,4 @@
-IMAGE := tfsecurity/tfsecurity
+IMAGE := khulnasoft/tfsecurity
 SHELL := /bin/bash
 
 MKDOCS_IMAGE := khulnasoft/mkdocs-material:tracee
