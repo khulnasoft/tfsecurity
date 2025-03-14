@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: tfsecurity
-        uses: tfsecurity/tfsecurity-pr-commenter-action@main
+        uses: khulnasoft/tfsecurity-pr-commenter-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 {% endraw %}

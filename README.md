@@ -4,7 +4,7 @@
 
 [![GoReportCard](https://goreportcard.com/badge/github.com/khulnasoft/tfsecurity)](https://goreportcard.com/report/github.com/khulnasoft/tfsecurity)
 [![Join Our Slack](https://img.shields.io/badge/Slack-Join-green)](https://slack.khulnasoft.com/)
-[![Docker Build](https://img.shields.io/docker/v/tfsecurity/tfsecurity?label=docker)](https://hub.docker.com/r/khulnasoft/tfsecurity)
+[![Docker Build](https://img.shields.io/docker/v/khulnasoft/tfsecurity?label=docker)](https://hub.docker.com/r/khulnasoft/tfsecurity)
 [![Homebrew](https://img.shields.io/badge/dynamic/json.svg?url=https://formulae.brew.sh/api/formula/tfsecurity.json&query=$.versions.stable&label=homebrew)](https://formulae.brew.sh/formula/tfsecurity)
 [![Chocolatey](https://img.shields.io/chocolatey/v/tfsecurity)](https://chocolatey.org/packages/tfsecurity)
 [![AUR version](https://img.shields.io/aur/version/tfsecurity-bin)](https://aur.archlinux.org/packages/tfsecurity-bin)
@@ -225,7 +225,7 @@ to specify your desired format.
 ## GitHub Security Alerts
 If you want to integrate with Github Security alerts and include the output of your tfsecurity checks you can use the [tfsecurity-sarif-action](https://github.com/marketplace/actions/run-tfsecurity-with-sarif-upload) Github action to run the static analysis then upload the results to the security alerts tab.
 
-The alerts generated for [tfsecurity-example-project](https://github.com/tfsecurity/tfsecurity-example-project) look like this.
+The alerts generated for [tfsecurity-example-project](https://github.com/khulnasoft/tfsecurity-example-project) look like this.
 
 ![github security alerts](codescanning.png)
 
