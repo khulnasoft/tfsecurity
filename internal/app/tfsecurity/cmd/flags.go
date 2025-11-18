@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -8,21 +9,22 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/khulnasoft/misscan/pkg/scanners/options"
 	"github.com/google/uuid"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/custom"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/khulnasoft/misscan/pkg/scan"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
-	"github.com/aquasecurity/defsec/pkg/severity"
+	scanner "github.com/khulnasoft/misscan/pkg/scanners/terraform"
+	"github.com/khulnasoft/misscan/pkg/severity"
 
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/khulnasoft/misscan/pkg/state"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/config"
 	"github.com/khulnasoft/tfsecurity/internal/pkg/legacy"
 )
@@ -343,8 +345,19 @@ func configureCustomChecks(options []options.ScannerOption, dir string) ([]optio
 func remoteConfigDownloaded() bool {
 	tempFile := filepath.Join(os.TempDir(), filepath.Base(configFileUrl))
 
-	/* #nosec */
-	resp, err := http.Get(configFileUrl)
+	client := &http.Client{
+		Timeout: 30 * time.Second,
+	}
+	
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+	
+	req, err := http.NewRequestWithContext(ctx, "GET", configFileUrl, nil)
+	if err != nil {
+		return false
+	}
+	
+	resp, err := client.Do(req)
 	if err != nil || resp.StatusCode != http.StatusOK {
 		return false
 	}
@@ -369,8 +382,19 @@ func remoteCustomCheckDownloaded() bool {
 	}
 	tempFile := filepath.Join(customTempDir, filepath.Base(customCheckUrl))
 
-	/* #nosec */
-	resp, err := http.Get(customCheckUrl)
+	client := &http.Client{
+		Timeout: 30 * time.Second,
+	}
+	
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+	
+	req, err := http.NewRequestWithContext(ctx, "GET", customCheckUrl, nil)
+	if err != nil {
+		return false
+	}
+	
+	resp, err := client.Do(req)
 	if err != nil || resp.StatusCode != http.StatusOK {
 		return false
 	}

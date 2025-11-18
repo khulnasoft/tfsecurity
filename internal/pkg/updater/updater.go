@@ -1,10 +1,12 @@
 package updater
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
 	"runtime"
+	"time"
 
 	semver "github.com/hashicorp/go-version"
 	"github.com/inconshreveable/go-update"
@@ -36,20 +38,31 @@ func Update() (string, error) {
 }
 
 func getLatestVersion() (string, error) {
-	resp, err := http.Get("https://api.github.com/repos/khulnasoft/tfsecurity/releases/latest")
+	client := &http.Client{
+		Timeout: 30 * time.Second,
+	}
+	
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+	
+	req, err := http.NewRequestWithContext(ctx, "GET", "https://api.github.com/repos/khulnasoft/tfsecurity/releases/latest", nil)
 	if err != nil {
-		return "", err
+		return "", fmt.Errorf("failed to create request: %w", err)
 	}
-
-	if resp.StatusCode != 200 {
-		return "", fmt.Errorf("error occurred when trying to download latest release data")
+	
+	resp, err := client.Do(req)
+	if err != nil {
+		return "", fmt.Errorf("failed to get latest version: %w", err)
 	}
-
 	defer func() { _ = resp.Body.Close() }()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+	}
 
 	var release githubRelease
 	if err := json.NewDecoder(resp.Body).Decode(&release); err != nil {
-		return "", err
+		return "", fmt.Errorf("failed to decode response: %w", err)
 	}
 
 	return release.TagName, nil
@@ -74,17 +87,33 @@ func updateIfNewer(latest string) (bool, error) {
 	} else if !newer {
 		return false, nil
 	}
+	
 	downloadUrl := resolveDownloadUrl(latest)
-	resp, err := http.Get(downloadUrl) //nolint
+	
+	client := &http.Client{
+		Timeout: 60 * time.Second,
+	}
+	
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+	defer cancel()
+	
+	req, err := http.NewRequestWithContext(ctx, "GET", downloadUrl, nil)
 	if err != nil {
-		return false, err
+		return false, fmt.Errorf("failed to create download request: %w", err)
+	}
+	
+	resp, err := client.Do(req)
+	if err != nil {
+		return false, fmt.Errorf("failed to download update: %w", err)
 	}
 	defer func() { _ = resp.Body.Close() }()
-	if resp.StatusCode != 200 {
-		return false, fmt.Errorf("failed to download the latest version of tfsecurity")
+	
+	if resp.StatusCode != http.StatusOK {
+		return false, fmt.Errorf("failed to download the latest version of tfsecurity: status code %d", resp.StatusCode)
 	}
+	
 	if err := update.Apply(resp.Body, update.Options{}); err != nil {
-		return false, err
+		return false, fmt.Errorf("failed to apply update: %w", err)
 	}
 	return true, nil
 }

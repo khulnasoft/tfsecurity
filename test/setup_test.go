@@ -12,8 +12,8 @@ import (
 
 	"github.com/owenrumney/go-sarif/v2/sarif"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/khulnasoft/tfsecurity/internal/app/tfsecurity/cmd"
+	"github.com/khulnasoft/misscan/pkg/scan"
+	"github.com/khulnasoft/tfsecurity/internal/pkg/commands"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -21,7 +21,7 @@ import (
 func runWithArgs(args ...string) (stdout string, stderr string, exit int) {
 	sOut := bytes.NewBuffer([]byte{})
 	sErr := bytes.NewBuffer([]byte{})
-	rootCmd := cmd.Root()
+	rootCmd := commands.NewRootCommand()
 	rootCmd.SetOut(sOut)
 	rootCmd.SetErr(sErr)
 	rootCmd.SetArgs(args)
@@ -31,10 +31,6 @@ func runWithArgs(args ...string) (stdout string, stderr string, exit int) {
 			_, _ = fmt.Fprintf(sErr, "Error: %s\n", err)
 		}
 		exit = 1
-		var exitErr *cmd.ExitCodeError
-		if errors.As(err, &exitErr) {
-			exit = exitErr.Code()
-		}
 	}
 	return sOut.String(), sErr.String(), exit
 }

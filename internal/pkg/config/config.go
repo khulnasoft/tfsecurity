@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aquasecurity/defsec/pkg/severity"
+	"github.com/khulnasoft/misscan/pkg/severity"
 	"gopkg.in/yaml.v2"
 )
 

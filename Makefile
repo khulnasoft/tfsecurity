@@ -38,8 +38,8 @@ tagger:
 
 .PHONY: typos
 typos:
-	which codespell || pip install codespell
-	codespell -S _examples,.tfsecurity,.terraform,.git,go.sum --ignore-words .codespellignore -f
+	which codetypo || pip install codetypo
+	codetypo -S _examples,.tfsecurity,.terraform,.git,go.sum --ignore-words .codetypoignore -f
 
 .PHONY: quality
 quality:
@@ -48,8 +48,8 @@ quality:
 
 .PHONY: fix-typos
 fix-typos:
-	which codespell || pip install codespell
-	codespell -S .terraform,go.sum --ignore-words .codespellignore -f -w -i1
+	which codetypo || pip install codetypo
+	codetypo -S .terraform,go.sum --ignore-words .codetypoignore -f -w -i1
 
 .PHONY: clone-image-github
 clone-image-github:
@@ -70,5 +70,5 @@ mkdocs-serve:
 
 .PHONY: update-defsec
 update-defsec:
-	go get github.com/aquasecurity/defsec@latest
+	go get github.com/khulnasoft/misscan@latest
 	go mod tidy

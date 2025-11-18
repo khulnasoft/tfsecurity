@@ -4,15 +4,16 @@ import (
 	"context"
 	"encoding/json"
 	"io/fs"
+	"log"
 	"strings"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
-	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser"
+	"github.com/khulnasoft/misscan/pkg/scan"
+	scanner "github.com/khulnasoft/misscan/pkg/scanners/terraform"
+	"github.com/khulnasoft/misscan/pkg/scanners/terraform/parser"
 	"github.com/liamg/memoryfs"
 
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/khulnasoft/misscan/pkg/terraform"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -976,7 +977,16 @@ func givenCheck(jsonContent string) {
 	var checksfile ChecksFile
 	err := json.NewDecoder(strings.NewReader(jsonContent)).Decode(&checksfile)
 	if err != nil {
-		panic(err)
+		log.Fatalf("Failed to decode JSON content in init: %v", err)
+	}
+	ProcessFoundChecks(checksfile)
+}
+
+func givenCheckWithT(t *testing.T, jsonContent string) {
+	var checksfile ChecksFile
+	err := json.NewDecoder(strings.NewReader(jsonContent)).Decode(&checksfile)
+	if err != nil {
+		t.Fatalf("Failed to decode JSON content: %v", err)
 	}
 	ProcessFoundChecks(checksfile)
 }

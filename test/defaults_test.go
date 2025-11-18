@@ -5,9 +5,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/rules"
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/khulnasoft/misscan/pkg/rules"
+	"github.com/khulnasoft/misscan/pkg/scan"
+	"github.com/khulnasoft/misscan/pkg/state"
 	"github.com/stretchr/testify/assert"
 )
 

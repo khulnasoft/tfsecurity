@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/khulnasoft/tfsecurity/internal/app/tfsecurity/cmd"
+	"github.com/khulnasoft/tfsecurity/internal/pkg/commands"
 )
 
 const transitionMsg = `
@@ -23,13 +23,9 @@ https://github.com/khulnasoft/tfsecurity/discussions/5
 
 func main() {
 	fmt.Fprint(os.Stderr, transitionMsg)
-	if err := cmd.Root().Execute(); err != nil {
+	if err := commands.NewRootCommand().Execute(); err != nil {
 		if err.Error() != "" {
 			fmt.Printf("Error: %s\n", err)
-		}
-		var exitErr *cmd.ExitCodeError
-		if errors.As(err, &exitErr) {
-			os.Exit(exitErr.Code())
 		}
 		os.Exit(1)
 	}

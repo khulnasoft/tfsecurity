@@ -6,11 +6,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
-	scanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
+	"github.com/khulnasoft/misscan/pkg/scan"
+	scanner "github.com/khulnasoft/misscan/pkg/scanners/terraform"
 
-	"github.com/aquasecurity/defsec/pkg/formatters"
-	"github.com/aquasecurity/defsec/pkg/severity"
+	"github.com/khulnasoft/misscan/pkg/formatters"
+	"github.com/khulnasoft/misscan/pkg/severity"
 	"github.com/liamg/clinch/terminal"
 	"github.com/liamg/tml"
 )
