@@ -3,7 +3,7 @@ module github.com/khulnasoft/tfsecurity
 go 1.21
 
 require (
-	github.com/AlecAivazis/survey/v2 v2.3.6
+	github.com/AlecAivazis/survey/v2 v2.3.7
 	github.com/Masterminds/semver v1.5.0
 	github.com/khulnasoft/misscan v0.0.0-20250611020040-9d0558678231
 	github.com/google/uuid v1.3.0
